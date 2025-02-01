@@ -1,4 +1,10 @@
 Nvm : https://github.com/coreybutler/nvm-windows/releases 
 ili mech bech ye5dem bil nvm : https://nodejs.org/fr/blog/release/v16.14.2
-MongoDB Base de donne :
+MongoDB compass  :
 https://www.mongodb.com/try/download/compass
+MongoDB Base de donne :
+https://www.mongodb.com/try/download/community
+postman :
+https://www.postman.com/downloads/
+
+wakatime
