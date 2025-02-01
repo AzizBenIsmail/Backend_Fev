@@ -8,3 +8,11 @@ postman :
 https://www.postman.com/downloads/
 
 wakatime
+
+
+1
+node => node -v
+npm i express-generator -g => express -v 
+express myyapp (express -h)
+cd myyapp
+npm i (node_module) 
