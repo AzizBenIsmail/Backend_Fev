@@ -16,3 +16,8 @@ npm i express-generator -g => express -v
 express myyapp (express -h)
 cd myyapp
 npm i (node_module) 
+
+//
+npm i nodemon
+npm i mongoose
+npm i dotenv
