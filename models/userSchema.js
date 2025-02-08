@@ -17,15 +17,6 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
-      minLength: 6,
-      match: [
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/,
-        "Le mot de passe doit contenir au moins 6 caractères, une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial.",
-      ],
-    },
-    password: {
-      type: String,
-      required: true,
       minLength: 8,
       match: [
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
