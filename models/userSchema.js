@@ -28,8 +28,8 @@ const userSchema = new mongoose.Schema(
       enum: ["admin", "client", "infi"],
     },
     user_image: { type: String, require: false, default: "client.png" },
-    //etat: Boolean
-    count: Number,
+    age: {type : Number },
+    count: {type : Number, default:'0'}
   },
   { timestamps: true }
 );
