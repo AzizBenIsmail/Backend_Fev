@@ -20,11 +20,10 @@ module.exports.addUserClientWithImg = async (req,res) => {
     try {
         const {username , email , password } = req.body;
         const roleClient = 'client'
-        // if (!checkIfUserExists) {
-        //     throw new Error("User not found");
-        //   }
+        const {filename} = req.file
+
         const user = await userModel.create({
-            username,email ,password,role :roleClient
+            username,email ,password,role :roleClient , user_image : filename
         })
         res.status(200).json({user});
     } catch (error) {
