@@ -10,6 +10,8 @@ module.exports.addUserClient = async (req,res) => {
         const user = await userModel.create({
             username,email ,password,role :roleClient, age
         })
+        // const user = new userModel({name,age,address,moy});
+        //   const adduser = await user.save();
         res.status(200).json({user});
     } catch (error) {
         res.status(500).json({message: error.message});
