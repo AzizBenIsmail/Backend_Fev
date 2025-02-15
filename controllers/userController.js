@@ -1,4 +1,5 @@
 const userModel = require('../models/userSchema');
+const carModel = require('../models/carSchema');
 
 module.exports.addUserClient = async (req,res) => {
     try {
@@ -49,7 +50,7 @@ module.exports.addUserAdmin= async (req,res) => {
 
 module.exports.getAllUsers= async (req,res) => {
     try {
-        const userListe = await userModel.find()
+        const userListe = await userModel.find().populate("Car")
 
         res.status(200).json({userListe});
     } catch (error) {
@@ -78,6 +79,10 @@ module.exports.deleteUserById= async (req,res) => {
         if (!checkIfUserExists) {
           throw new Error("User not found");
         }
+
+        await carModel.updateMany({owner : id},{
+            $unset: { owner: 1 },// null "" 
+          });
 
         await userModel.findByIdAndDelete(id)
 
@@ -178,3 +183,4 @@ module.exports.searchUserByUsername = async (req, res) => {
             res.status(500).json({message: error.message});
         }
     }
+
