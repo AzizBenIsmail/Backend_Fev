@@ -12,6 +12,7 @@ module.exports.esmfonction = async (req,res) => {
 module.exports.getOsInformation = async (req,res) => {
     try {
         //..
+        const user = req.session.user;
         const getOsInformation = {
             hostname : os.hostname(),
             type : os.type(),

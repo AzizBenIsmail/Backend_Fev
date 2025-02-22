@@ -7,6 +7,7 @@ const {requireAuthUser} = require('../middlewares/authMiddleware');
 router.post('/addUserClient',userController.addUserClient); 
 router.post('/addUserAdmin',userController.addUserAdmin); 
 router.post('/login',userController.login); 
+router.post('/logout',userController.logout); 
 router.get('/getAllUsers',requireAuthUser,userController.getAllUsers); 
 router.get('/getUserById/:id',userController.getUserById); 
 router.get('/searchUserByUsername',userController.searchUserByUsername); 
