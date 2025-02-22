@@ -5,7 +5,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const session = require("express-session"); //session
 const { connectToMongoDb } = require("./config/db");
-
+const cors = require("cors");
 require("dotenv").config();
 
 
@@ -24,6 +24,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+
+app.use(cors({
+  origin:"http://localhost:3000",
+  methods:"GET,POST,PUT,Delete",
+}))
 
 app.use(session({   //cobfig session
   secret: "net secret pfe",
