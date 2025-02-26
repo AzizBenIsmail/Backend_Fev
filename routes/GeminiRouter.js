@@ -1,5 +1,5 @@
 const express = require("express");
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { GoogleGenerativeAI } = require("@google/generative-ai"); // npm i @google/generative-ai
 
 const router = express.Router();
 
